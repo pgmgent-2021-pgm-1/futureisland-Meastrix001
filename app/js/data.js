@@ -17,20 +17,20 @@ navBarInfo = [
       link: 'www.facebook.com'
     },
     {
-      site: 'facebook',
-      link: 'www.facebook.com'
+      site: 'insta',
+      link: 'www.instagram.com'
     },
     {
-      site: 'facebook',
-      link: 'www.facebook.com'
+      site: 'twitter',
+      link: 'www.twitter.com'
     },
      {
-      site: 'facebook',
-      link: 'www.facebook.com'
+      site: 'youtube',
+      link: 'www.youtube.com'
     },
     {
-      site: 'facebook',
-      link: 'www.facebook.com'
+      site: 'spotify',
+      link: 'www.spotify.com'
     },
 
   ]
