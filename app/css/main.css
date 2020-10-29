@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: gray;
+  background-image: url('https://assets.rockwerchter.be/layout/frontend/img/svg/pattern-2021.svg');
+  background-repeat: no-repeat;
+  background-size: 100rem,  ;
+}
+
+.navBarLayout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  transition: 1s;
+  padding: .2rem;
+  max-width: 100%;
+  margin: auto;
+  height: 5rem;
+
+}
+.navBarInfo{
+  list-style-type: none;
+}
+.navBarInfo ul {
+  color: red;
+  border-color: aqua;
+  border-style: solid;
+  list-style-type: none;
+  display: flex;
+  margin: 5px;
+  width: 10rem;
+  height: 100%;
+  max-width: 100%;
+  padding: 0.2rem;
+
+}
+.navBarInfo a{
+  text-decoration: none;
+  text-align: center;
+  background-color: red;
+  justify-content: flex-start;
+}
+.navBarLayout:hover {
+  background-position: -10%;
+  transition: 2s;
+}
+	
+@media(min-width: 62rem) {
+  .navBarLayout {
+    text-align: right;
+    flex-wrap: nowrap;
+  }
+}
+
+
+.artistsLayout{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.artistsInfo {
+  color: red;
+  border-color: aqua;
+  border-style: solid;
+  display: flex;
+  flex-grow: 1;
+  margin: 5px;
+  width: 30rem;
+  height: 20rem;
+  padding: 1rem;
+  align-items: flex-end;
+  background-color: white;
+}
+.banner2021{
+  background-image: url('https://assets.rockwerchter.be/layout/frontend/img/svg/pattern-2021.svg');
+}
+.timer{
+  font-size: 4rem;
+  color: white;
+  background-color: black;
+  width: 40rem;
+  padding: 2rem;
+  margin-top: 1rem;
+  text-align: center;
+}
