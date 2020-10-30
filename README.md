@@ -1,3 +1,3 @@
-# HELLO STRANGER
+# YOU ARE ON MY PAGE!
 
-## I'm the real slim shady
+## keep it nice ok? thanks!

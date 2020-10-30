@@ -1,13 +1,28 @@
-navBarInfo = [
-  'Home',
-  'Lineup',
-  'Tickets',
-  'Praktisch',
-  'Camping',
-  'History',
-  'RWTV',
-  'NMV',
-  'KOOP TICKETS',
+navBarInfo = [{
+  title:'home',
+  link: 'https://www.rockwerchter.be/en/'
+},{
+  title:'Tickets',
+  link: 'https://www.rockwerchter.be/en/line-up'
+},{
+  title:'Praktisch',
+  link: 'https://www.rockwerchter.be/en/tickets'
+},{
+  title:'Camping',
+  link: 'https://www.rockwerchter.be/en/practical'
+},{
+  title:'History',
+  link: 'https://www.rockwerchter.be/en/history'
+},{
+  title:'RWTV',
+  link: 'https://www.proximus.be/pickx/nl/festivals/rockwerchter/vod'
+},{
+  title:'NMV',
+  link: 'http://northwestwalls.be/'
+},{
+  title:'KOOP TICKETS',
+  link: 'https://www.ticketmaster.be/feature/rockwerchter/?language=en-us&utm_source=rockwerchter.be&utm_medium=website&utm_campaign=rw21&_ga=2.69917465.887923365.1603894451-17819582.1603552278'
+}
 ];
 
 navDate = [{

@@ -9,6 +9,7 @@
 
     cacheElements() {
       console.log('Elements Cached');
+      this.$navBarDatePlace = document.querySelector('.navBarDatePlace');
       this.$navBarLayout = document.querySelector('.navBarLayout');
       this.$artistsLayout = document.querySelector('.artistsLayout');
       this.$countDownTimer = document.querySelector('.timer');
@@ -20,6 +21,7 @@
 
     buildUI() {
       console.log('building UI')
+      this.$navBarDatePlace.innerHTML = this.createHTMLforNavBarDatePlace();
       this.$navBarLayout.innerHTML = this.createHTMLForNavBar();
       this.$artistsLayout.innerHTML = this.createHTMLForArtists();
       this.$countDownTimer.innerHTML = this.createHTMLCountDownTimer();
@@ -28,12 +30,23 @@
       this.$knowmore.innerHTML = this.createHTMLKnowMoreList();
       this.$newsletter.innerHTML = this.createHTMLForNewsLetter();
     },
+    createHTMLforNavBarDatePlace(){
+      console.log('creating the NavBar')
+      let tempStr = '';
+      navDate.forEach((info, index) => {
+        tempStr += `<li class="navBarDateInfo">${info.date}</li>`;
+        tempStr += `<li class="navBarDateInfo">${info.place}</li>`;
+        tempStr += `<li class="navBarDateInfo">${info.who}</li>`;
+        tempStr += `<li class="navBarDateInfo">${info.country}</li>`;
+      });
+      return tempStr;
+    },
     createHTMLForNavBar() {
       console.log('creating the NavBar')
       let tempStr = '';
       navBarInfo.forEach((info, index) => {
         tempStr += `
-        <li class="navBarInfo"> <a href="${info}">${info} </a></li>`;
+        <li class="navBarInfo"> <a href="${info.link}">${info.title} </a></li>`;
       });
       return tempStr;
     },
@@ -43,7 +56,7 @@
       let tempStr = '';
       artists.forEach((info, index) => {
         tempStr += `
-      <div class="artistsInfo" style="background: url(${info.picture.small}); background-size: cover; background-repeat: no-repeat;">${info.name}</div>`;
+      <div class="artistsInfo" style="background: url(${info.picture.small}); background-size: cover; background-repeat: no-repeat;"><p>${info.name}</p></div>`;
       });
       return tempStr;
 
@@ -109,7 +122,7 @@
       console.log('creating Know more list ')
       let tempStr = '';
       knowmorelist.forEach((info, index) => {
-        tempStr += `<li> <a href=" ${info.link}">${info.text}</a></li>`;
+        tempStr += `<li> <a href="${info.link}" target="_blank">${info.text}</a></li>`;
       });
       return tempStr;
     },

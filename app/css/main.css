@@ -1,39 +1,71 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
 * {
   box-sizing: border-box;
 }
+
 body {
-  background-color: gray;
+  background-color: white;
   margin: 0;
 }
+
 .navbar {
   background: url(https://assets.rockwerchter.be/layout/frontend/img/svg/pattern-2021.svg);
-  height: 16rem;
+  height: 22rem;
   border: 3px solid green;
+  position: relative;
+  transition: 2s;
+}
+.navbar:hover {
+  background-position: -10%;
+  transition: 2s;
+}
+
+.navBarDatePlace {
+  width: fit-content;
+  position: absolute;
+  left: 1rem;
+  top: 0;
+}
+
+.navBarDatePlace li {
+  color: white;
+  list-style: none;
+  font-size: 3rem;
+  margin-top: 10px;
+}
+
+.navBarDatePlace li:first-child {
+  color: cyan
 }
 
 .navBarLayout {
-  background: rgb(110,0,255);
-  background: linear-gradient(90deg, rgba(110,0,255,1) 30%, rgba(255,123,0,1) 100%);
+  background: rgb(110, 0, 255);
+  background: linear-gradient(270deg, #ffa29c 5.19%, #643cfa 100%);
   display: flex;
   transition: 1s;
-  max-width: 100%; 
+  max-width: 100%;
   width: fit-content;
-  margin-top: 3rem;
   height: 5rem;
   margin-right: 1rem;
-  float: right;
+  position: absolute;
+  top: 6rem;
+  right: 6rem;
+}
+.navBarLayout a{
+  color: white;
 }
 
-.navBarLayout li:nth-child(2) {
+.navBarLayout :nth-child(2) {
   color: black;
 }
+
 .navBarLayout li:last-child {
   background: black;
   padding: 10px;
   margin-top: 10px;
 }
+
 .navBarInfo {
   font-family: 'Staatliches', cursive;
   display: flex;
@@ -43,10 +75,8 @@ body {
   margin-right: 1rem;
   color: white;
 }
-	.navBarLayout:hover {
-  background-position: -10%;
-  transition: 2s;
-}
+
+
 @media(min-width: 62rem) {
   .navBarLayout {
     text-align: right;
@@ -54,52 +84,81 @@ body {
   }
 }
 
-
-.artistsLayout{
+.artistsLayout {
   display: flex;
   flex-wrap: wrap;
   margin: auto;
+  color: white;
 }
 
 .artistsInfo {
-  color: red;
-  border-color: aqua;
-  border-style: solid;
+  color: white;
   margin: 5px;
-  width: 30rem;
+  width: 45rem;
   height: 30rem;
   padding: 1rem;
-  align-items: flex-end;
-  background-color: white; 
+  background-color: green;
   background-position: 50% 50%;
+  position: relative;
 }
 
-.timer{
+.artistsInfo p {
+  position: absolute;
+  bottom: 2rem;
+  background: linear-gradient(90deg, rgba(110, 0, 255, 1) 30%, rgba(255, 123, 0, 1) 100%);
+  padding: 0.4rem;
+}
+
+.timer {
   font-size: 4rem;
-  color: white;
-  background-color: black;
+  background: linear-gradient(90deg, rgba(110, 0, 255, 1) 30%, rgba(255, 123, 0, 1) 100%);
   width: 40rem;
   padding: 2rem;
   margin-top: 1rem;
   text-align: center;
 }
-.social{
+
+.footer__wrapper {
+  position: relative;
+  background-color: #009;
+  color: gray;
+  text-decoration: none;
+  width: 100%;
+}
+
+.footer__wrapper li {
+  list-style: none;
+}
+
+.footer__wrapper a {
+  text-decoration: none;
+}
+
+.social {
   list-style: none;
   width: 10rem;
   height: 10rem;
 }
-.socialMediaInfo li{
-list-style: none;
-flex-direction: row;
-display: flex;
-}
-.socialMediaInfo ul{
+
+.socialMediaInfo {
   display: flex;
-  flex-wrap: wrap;
-  width: 100%;
+  width: 40rem;
+  justify-content: space-between;
+  margin-top: 0;
+  position: absolute;
+  top: 5rem;
+  left: 5rem
 }
 
-.fa{
+.social a:hover,
+.infobox a:hover,
+.info a:hover,
+.knowmore a:hover,
+.newsletter p:hover {
+  text-decoration: underline;
+}
+
+.fa {
   background-color: black;
   padding: 20px;
   font-size: 30px;
@@ -110,30 +169,31 @@ display: flex;
   flex-wrap: wrap;
   flex-direction: row;
 }
+
 .fa:hover {
 
   opacity: 0.7;
-  color:gray;
+  color: gray;
   transition: 0.2s;
   transform: rotate(7deg);
 }
 
-.footer__wrapper{
-  background-color: blue;
-  color: gray;
-  text-decoration: none;
-  width: 100%;
-  
-  
-}
-.footer__wrapper li{
-  list-style: none;
-}
-
-.infobox{
-  background-color: blue;
+.infobox {
+  background-color: #009;
   display: flex;
   flex-wrap: wrap;
   padding: 3rem;
   justify-content: space-around;
+}
+
+.infobox a {
+  color: gray;
+  font-size: 2rem;
+}
+
+input {
+  background-color: #009;
+  border: 2px solid white;
+  color: white;
+  height: 2rem;
 }
