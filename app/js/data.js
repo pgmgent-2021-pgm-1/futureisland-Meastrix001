@@ -10,7 +10,12 @@ navBarInfo = [
   'KOOP TICKETS',
 ];
 
-
+navDate = [{
+ date: '1-4 JULY',
+ place: 'FESTIVALPARK',
+ who: 'WERCHTER',
+ country: 'BELGUIM' 
+}]
 socialInfo = [{
     site: 'facebook',
     link: 'https://www.facebook.com/rockwerchterfestival'
@@ -35,7 +40,8 @@ socialInfo = [{
 ];
 
 
-rockwerchterinfo = [{
+rockwerchterinfo = [
+  {
   text: 'About Rock Werchter',
   link: 'https://www.rockwerchter.be/en/about-rock-werchter'
 }, {
@@ -62,7 +68,8 @@ rockwerchterinfo = [{
 }, {
   text: 'Thanks to',
   link: 'https://www.rockwerchter.be/en/thanks-to'
-}, ];
+},
+ ];
 
 knowmorelist = [{
   text: 'Tickets',

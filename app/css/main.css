@@ -69,10 +69,11 @@ body {
   flex-grow: 1;
   margin: 5px;
   width: 30rem;
-  height: 20rem;
+  height: 30rem;
   padding: 1rem;
   align-items: flex-end;
-  background-color: white;
+  background-color: white; 
+  background-position: 50% 50%;
 }
 .banner2021{
   background-image: url('https://assets.rockwerchter.be/layout/frontend/img/svg/pattern-2021.svg');

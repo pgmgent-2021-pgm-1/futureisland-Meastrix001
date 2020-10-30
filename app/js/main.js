@@ -25,11 +25,11 @@
       this.$countDownTimer.innerHTML = this.createHTMLCountDownTimer();
       this.$socialMedia.innerHTML = this.createHTMLSocialMediaList();
       this.$info.innerHTML = this.createHTMLInfoList();
-      this.$knowmore = this.createHTMLKnowMoreList();
-      this.$newsletter = this.createHTMLForNewsLetter();
+      this.$knowmore.innerHTML = this.createHTMLKnowMoreList();
+      this.$newsletter.innerHTML = this.createHTMLForNewsLetter();
     },
     createHTMLForNavBar() {
-      console.log('createNavBar')
+      console.log('creating the NavBar')
       let tempStr = '';
       navBarInfo.forEach((info, index) => {
         tempStr += `
@@ -39,7 +39,7 @@
     },
 
     createHTMLForArtists() {
-      console.log('createNavBar')
+      console.log('Creating the artists boxes')
       let tempStr = '';
       artists.forEach((info, index) => {
         tempStr += `
@@ -49,6 +49,7 @@
 
     },
     createHTMLCountDownTimer() {
+      console.log('Creating countDown timer')
       let countDownDate = new Date(1625148000000).getTime();
 
       let x = setInterval(function () {
@@ -81,7 +82,7 @@
       }, 1000);
     },
     createHTMLSocialMediaList() {
-      console.log('create List Of social Media Links')
+      console.log('creating List Of social Media Links')
       let tempStr = '';
       tempStr += '<ul class="socialMediaInfo">'
       socialInfo.forEach((si, index) => {
@@ -92,36 +93,31 @@
       return tempStr;
     },
     createHTMLInfoList() {
-      console.log('create List of info links of rockwerchter')
+      console.log('creating List of info links of rockwerchter')
       let tempStr = '';
-      tempStr += '<ul class="wertcherinfo>'
       rockwerchterinfo.forEach((info, index) => {
         tempStr += `
-          <li> <a href="${info.link}">${info.text}</a></li>`;
+          <li> <a href="${index} ${info.link}">${info.text}</a></li>`;
       });
-      tempStr += '</ul>'
       return tempStr;
     },
     createHTMLKnowMoreList() {
-      console.log('create List of info links of rockwerchter')
+      console.log('creating Know more list ')
       let tempStr = '';
-      tempStr += '<ul class="knowmorelist>'
       knowmorelist.forEach((info, index) => {
         tempStr += `
-          <li> <a href="${info.link}">${info.text}</a></li>`;
+          <li> <a href=" ${info.link}">${info.text}</a></li>`;
       });
-      tempStr += '</ul>'
       return tempStr;
     },
-   createHTMLForNewsLetter() {
-      console.log('Know more list')
+    createHTMLForNewsLetter() {
+      console.log('Creating news letter input')
       let tempStr = '';
-      tempStr += '<ul>'
       newsletter.forEach((knowM, index) => {
-        tempStr += `
-        <div> <li>${knowM.title} </li></div>`;
+        tempStr += `<h2>${knowM.title}</h2>`
+        tempStr += `<p>${knowM.text}</p>`
+        tempStr += `<input>${knowM.title} </input>`;
       });
-      tempStr += '</ul>'
       return tempStr;
     },
 
