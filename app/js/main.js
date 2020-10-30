@@ -87,7 +87,7 @@
       tempStr += '<ul class="socialMediaInfo">'
       socialInfo.forEach((si, index) => {
         tempStr += `
-          <li> <a href="${si.link}">${si.site}</a></li>`;
+          <li> <a href="${si.link}" target="_blank"><i class="fab fa-facebook"></a></i></li>`;
       });
       tempStr += '</ul>'
       return tempStr;

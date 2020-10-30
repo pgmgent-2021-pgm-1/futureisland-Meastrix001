@@ -17,6 +17,7 @@ navDate = [{
  country: 'BELGUIM' 
 }]
 socialInfo = [{
+    icon: 'fas fa-facebook',
     site: 'facebook',
     link: 'https://www.facebook.com/rockwerchterfestival'
   },
