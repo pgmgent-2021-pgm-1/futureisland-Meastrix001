@@ -11,29 +11,81 @@ navBarInfo = [
 ];
 
 
-  socialInfo = [
-     {
-      site: 'facebook',
-      link: 'www.facebook.com'
-    },
-    {
-      site: 'insta',
-      link: 'www.instagram.com'
-    },
-    {
-      site: 'twitter',
-      link: 'www.twitter.com'
-    },
-     {
-      site: 'youtube',
-      link: 'www.youtube.com'
-    },
-    {
-      site: 'spotify',
-      link: 'www.spotify.com'
-    },
+socialInfo = [{
+    site: 'facebook',
+    link: 'https://www.facebook.com/rockwerchterfestival'
+  },
+  {
+    site: 'twitter',
+    link: 'https://twitter.com/rockwerchter'
+  },
+  {
+    site: 'insta',
+    link: 'https://www.instagram.com/rockwerchterfestival/'
+  },
+  {
+    site: 'spotify',
+    link: 'https://open.spotify.com/user/rockwerchterofficial'
+  },
 
-  ]
+  {
+    site: 'youtube',
+    link: 'https://www.youtube.com/user/rockwerchterfestival'
+  },
+];
+
+
+rockwerchterinfo = [{
+  text: 'About Rock Werchter',
+  link: 'https://www.rockwerchter.be/en/about-rock-werchter'
+}, {
+  text: 'Contact',
+  link: 'https://www.rockwerchter.be/en/contact'
+}, {
+  text: 'tress website',
+  link: 'https://www.rockwerchter.be/en/press-website'
+}, {
+  text: 'Conditions of sale',
+  link: 'https://www.rockwerchter.be/en/conditions-of-sale'
+}, {
+  text: 'Green',
+  link: 'https://www.rockwerchter.be/en/green'
+}, {
+  text: 'Disclaimer',
+  link: 'https://www.rockwerchter.be/en/disclaimer'
+}, {
+  text: 'Privacy policy',
+  link: 'https://nl.livenation.be/privacy?_ga=2.173932458.887923365.1603894451-17819582.1603552278'
+}, {
+  text: 'Cookies',
+  link: 'https://nl.livenation.be/cookies?_ga=2.173932458.887923365.1603894451-17819582.1603552278'
+}, {
+  text: 'Thanks to',
+  link: 'https://www.rockwerchter.be/en/thanks-to'
+}, ];
+
+knowmorelist = [{
+  text: 'Tickets',
+  link: 'https://www.rockwerchter.be/en/practical/tickets'
+}, {
+  text: 'At the festival site',
+  link: 'https://www.rockwerchter.be/en/contact'
+}, {
+  text: 'How to get there?',
+  link: 'https://www.rockwerchter.be/en/practical/how-to-get-there'
+}, {
+  text: 'Camping',
+  link: 'https://www.rockwerchter.be/en/practical/camping'
+}, {
+  text: 'Frequently asked questions',
+  link: 'https://www.rockwerchter.be/en/practical/frequently-asked-questions'
+}, ];
+
+newsletter = [{
+  title: 'newsletter',
+  text: 'Subscribe to our newsletter to stay tuned to the latest news.'
+},]
+
 
 
 artists = [{
