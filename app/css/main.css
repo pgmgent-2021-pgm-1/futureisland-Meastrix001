@@ -4,16 +4,17 @@
 
 body {
   background-color: gray;
-  background-image: url('https://assets.rockwerchter.be/layout/frontend/img/svg/pattern-2021.svg');
   background-repeat: no-repeat;
   background-size: 100rem,  ;
+}
+.header{
+  background-image: url('https://assets.rockwerchter.be/layout/frontend/img/svg/pattern-2021.svg');
 }
 
 .navBarLayout {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-
   transition: 1s;
   padding: .2rem;
   max-width: 100%;
