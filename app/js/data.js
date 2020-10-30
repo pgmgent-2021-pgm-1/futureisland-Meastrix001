@@ -17,24 +17,28 @@ navDate = [{
  country: 'BELGUIM' 
 }]
 socialInfo = [{
-    icon: 'fas fa-facebook',
+    icon: 'fa fa-facebook',
     site: 'facebook',
     link: 'https://www.facebook.com/rockwerchterfestival'
   },
   {
+    icon: 'fa fa-twitter',
     site: 'twitter',
     link: 'https://twitter.com/rockwerchter'
   },
   {
+    icon: 'fa fa-instagram',
     site: 'insta',
     link: 'https://www.instagram.com/rockwerchterfestival/'
   },
   {
+    icon: 'fa fa-spotify',
     site: 'spotify',
     link: 'https://open.spotify.com/user/rockwerchterofficial'
   },
 
   {
+    icon: 'fa fa-youtube',
     site: 'youtube',
     link: 'https://www.youtube.com/user/rockwerchterfestival'
   },
@@ -72,7 +76,8 @@ rockwerchterinfo = [
 },
  ];
 
-knowmorelist = [{
+knowmorelist = [
+{
   text: 'Tickets',
   link: 'https://www.rockwerchter.be/en/practical/tickets'
 }, {
@@ -90,9 +95,10 @@ knowmorelist = [{
 }, ];
 
 newsletter = [{
+  sub: 'SUBSCRIBE',
   title: 'newsletter',
   text: 'Subscribe to our newsletter to stay tuned to the latest news.'
-},]
+}]
 
 
 

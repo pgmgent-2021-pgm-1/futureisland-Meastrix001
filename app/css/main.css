@@ -1,54 +1,52 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 * {
   box-sizing: border-box;
 }
-
 body {
   background-color: gray;
-  background-repeat: no-repeat;
-  background-size: 100rem,  ;
+  margin: 0;
 }
-.header{
-  background-image: url('https://assets.rockwerchter.be/layout/frontend/img/svg/pattern-2021.svg');
+.navbar {
+  background: url(https://assets.rockwerchter.be/layout/frontend/img/svg/pattern-2021.svg);
+  height: 16rem;
+  border: 3px solid green;
 }
 
 .navBarLayout {
+  background: rgb(110,0,255);
+  background: linear-gradient(90deg, rgba(110,0,255,1) 30%, rgba(255,123,0,1) 100%);
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
   transition: 1s;
-  padding: .2rem;
-  max-width: 100%;
-  margin: auto;
+  max-width: 100%; 
+  width: fit-content;
+  margin-top: 3rem;
   height: 5rem;
+  margin-right: 1rem;
+  float: right;
+}
 
+.navBarLayout li:nth-child(2) {
+  color: black;
 }
-.navBarInfo{
-  list-style-type: none;
+.navBarLayout li:last-child {
+  background: black;
+  padding: 10px;
+  margin-top: 10px;
 }
-.navBarInfo ul {
-  color: red;
-  border-color: aqua;
-  border-style: solid;
-  list-style-type: none;
+.navBarInfo {
+  font-family: 'Staatliches', cursive;
   display: flex;
-  margin: 5px;
-  width: 10rem;
-  height: 100%;
-  max-width: 100%;
-  padding: 0.2rem;
-
+  font-size: 2.1rem;
+  height: max-content;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  color: white;
 }
-.navBarInfo a{
-  text-decoration: none;
-  text-align: center;
-  background-color: red;
-  justify-content: flex-start;
-}
-.navBarLayout:hover {
+	.navBarLayout:hover {
   background-position: -10%;
   transition: 2s;
 }
-	
 @media(min-width: 62rem) {
   .navBarLayout {
     text-align: right;
@@ -60,14 +58,13 @@ body {
 .artistsLayout{
   display: flex;
   flex-wrap: wrap;
+  margin: auto;
 }
 
 .artistsInfo {
   color: red;
   border-color: aqua;
   border-style: solid;
-  display: flex;
-  flex-grow: 1;
   margin: 5px;
   width: 30rem;
   height: 30rem;
@@ -76,9 +73,7 @@ body {
   background-color: white; 
   background-position: 50% 50%;
 }
-.banner2021{
-  background-image: url('https://assets.rockwerchter.be/layout/frontend/img/svg/pattern-2021.svg');
-}
+
 .timer{
   font-size: 4rem;
   color: white;
@@ -87,4 +82,58 @@ body {
   padding: 2rem;
   margin-top: 1rem;
   text-align: center;
+}
+.social{
+  list-style: none;
+  width: 10rem;
+  height: 10rem;
+}
+.socialMediaInfo li{
+list-style: none;
+flex-direction: row;
+display: flex;
+}
+.socialMediaInfo ul{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.fa{
+  background-color: black;
+  padding: 20px;
+  font-size: 30px;
+  width: 4rem;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.fa:hover {
+
+  opacity: 0.7;
+  color:gray;
+  transition: 0.2s;
+  transform: rotate(7deg);
+}
+
+.footer__wrapper{
+  background-color: blue;
+  color: gray;
+  text-decoration: none;
+  width: 100%;
+  
+  
+}
+.footer__wrapper li{
+  list-style: none;
+}
+
+.infobox{
+  background-color: blue;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3rem;
+  justify-content: space-around;
 }

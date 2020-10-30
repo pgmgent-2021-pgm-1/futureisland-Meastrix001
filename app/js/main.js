@@ -55,29 +55,33 @@
       let x = setInterval(function () {
 
         let now = new Date().getTime();
-
+        let tempStr
         let distance = countDownDate - now;
+        let days = Math.floor(distance / (1000 * 60 * 60 * 24))
+        let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        let days = Math.floor(distance / (1000 * 60 * 60 * 24));
         if((days+"").length === 2){
-          days = "0"+days;}
+          days = "0"+days}
         if((days+"").length === 1){
           days = "00"+days;}
-        let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         if(( hours+"").length === 1){
           hours = "0"+ hours;}
-        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         if((minutes+"").length === 1){
           minutes = "0"+minutes;}
-        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        if((seconds+"").length === 1){
-          seconds = "0"+seconds;}
+          if((seconds+"").length === 1){
+            seconds = "0"+seconds;}
 
-        document.querySelector(".timer").innerHTML = days + "d " + hours + "h " +
-          minutes + "m " + seconds + "s ";
+          tempStr= `${days}d ${hours}h
+          ${minutes}m ${seconds}s `
+
+
+        document.querySelector(".timer").innerHTML = tempStr
+
         if (distance < 0) {
           clearInterval(x);
-          document.querySelector(".timer").innerHTML = "EXPIRED";
+          document.querySelector(".timer").innerHTML = "See You Next Year!";
         }
       }, 1000);
     },
@@ -87,7 +91,7 @@
       tempStr += '<ul class="socialMediaInfo">'
       socialInfo.forEach((si, index) => {
         tempStr += `
-          <li> <a href="${si.link}" target="_blank"><i class="fab fa-facebook"></a></i></li>`;
+          <li> <a href="${si.link}" class="${si.icon}"></a></li>`;
       });
       tempStr += '</ul>'
       return tempStr;
@@ -105,8 +109,7 @@
       console.log('creating Know more list ')
       let tempStr = '';
       knowmorelist.forEach((info, index) => {
-        tempStr += `
-          <li> <a href=" ${info.link}">${info.text}</a></li>`;
+        tempStr += `<li> <a href=" ${info.link}">${info.text}</a></li>`;
       });
       return tempStr;
     },
@@ -116,7 +119,7 @@
       newsletter.forEach((knowM, index) => {
         tempStr += `<h2>${knowM.title}</h2>`
         tempStr += `<p>${knowM.text}</p>`
-        tempStr += `<input>${knowM.title} </input>`;
+        tempStr += `<input>${knowM.sub}</input>`;
       });
       return tempStr;
     },
