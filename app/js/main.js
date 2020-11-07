@@ -5,6 +5,8 @@
       console.log('app STARTED')
       this.cacheElements();
       this.buildUI();
+      this.setEventListeners();
+      this.exitButtonEventListener();
     },
 
     cacheElements() {
@@ -17,6 +19,8 @@
       this.$info = document.querySelector('.info');
       this.$knowmore = document.querySelector('.knowMore');
       this.$newsletter = document.querySelector('.newsletter');
+      this.$artistDetails = document.querySelector('.artistDetails')
+      this.$exitButton = document.querySelector('exitButton')
     },
 
     buildUI() {
@@ -29,8 +33,9 @@
       this.$info.innerHTML = this.createHTMLInfoList();
       this.$knowmore.innerHTML = this.createHTMLKnowMoreList();
       this.$newsletter.innerHTML = this.createHTMLForNewsLetter();
+
     },
-    createHTMLforNavBarDatePlace(){
+    createHTMLforNavBarDatePlace() {
       console.log('creating the NavBar')
       let tempStr = '';
       navDate.forEach((info, index) => {
@@ -56,7 +61,7 @@
       let tempStr = '';
       artists.forEach((info, index) => {
         tempStr += `
-      <div class="artistsInfo" style="background: url(${info.picture.small}); background-size: cover; background-repeat: no-repeat;"><p>${info.name}</p></div>`;
+      <div class="artistsInfo" style="background: url(${info.picture.small}); background-size: cover; background-repeat: no-repeat;" data-id="${info.id}"><p>${info.name}</p></div>`;
       });
       return tempStr;
 
@@ -75,18 +80,23 @@
         let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        if((days+"").length === 2){
-          days = "0"+days}
-        if((days+"").length === 1){
-          days = "00"+days;}
-        if(( hours+"").length === 1){
-          hours = "0"+ hours;}
-        if((minutes+"").length === 1){
-          minutes = "0"+minutes;}
-          if((seconds+"").length === 1){
-            seconds = "0"+seconds;}
+        if ((days + "").length === 2) {
+          days = "0" + days
+        }
+        if ((days + "").length === 1) {
+          days = "00" + days;
+        }
+        if ((hours + "").length === 1) {
+          hours = "0" + hours;
+        }
+        if ((minutes + "").length === 1) {
+          minutes = "0" + minutes;
+        }
+        if ((seconds + "").length === 1) {
+          seconds = "0" + seconds;
+        }
 
-          tempStr= `${days}d ${hours}h
+        tempStr = `${days}d ${hours}h
           ${minutes}m ${seconds}s `
 
 
@@ -112,6 +122,7 @@
     createHTMLInfoList() {
       console.log('creating List of info links of rockwerchter')
       let tempStr = '';
+      tempStr = '<h2>Info</h2>';
       rockwerchterinfo.forEach((info, index) => {
         tempStr += `
           <li> <a href="${index} ${info.link}">${info.text}</a></li>`;
@@ -121,7 +132,8 @@
     createHTMLKnowMoreList() {
       console.log('creating Know more list ')
       let tempStr = '';
-      knowmorelist.forEach((info, index) => {
+      tempStr = '<h2>Know More?</h2>';
+      knowMoreList.forEach((info, index) => {
         tempStr += `<li> <a href="${info.link}" target="_blank">${info.text}</a></li>`;
       });
       return tempStr;
@@ -132,11 +144,45 @@
       newsletter.forEach((knowM, index) => {
         tempStr += `<h2>${knowM.title}</h2>`
         tempStr += `<p>${knowM.text}</p>`
-        tempStr += `<input>${knowM.sub}</input>`;
+        tempStr += `<input placeholder="  Email"><button type="submit">${knowM.sub}</i></button></input>`;
       });
       return tempStr;
     },
+    setEventListeners() {
+      let $artistsLayout = document.querySelectorAll('.artistsInfo');
+      $artistsLayout.forEach((ad) => {
+        ad.addEventListener('click', (evt) => {
+          let id = evt.target.dataset.id || evt.target.parentNode.dataset.id
+          this.generateHTMLForDetails(id);
+        })
+      })
+    },
 
+    generateHTMLForDetails(id) {
+      const artistData = artists.find((a) => a.id === id);
+      console.log('artistData');
+      
+      this.$artistDetails.innerHTML = `
+
+      <div class=artistDetailBackground>
+      <div class="showArtistDetails">
+
+      <h2>${artistData.name}</h2>
+      <img src="${artistData.picture.small}">
+      ${artistData.synopsis}
+          <a href=${artistData.social.website}>${artistData.social.website}</a>
+          <a href=${artistData.social.facebook}>${artistData.social.facebook}</a>
+          <a href=${artistData.social.twitter}>${artistData.social.twitter}</a>
+          <a href=${artistData.social.instagram}>${artistData.social.instagram}</a>
+          <iframe width="802" height="502" src="${artistData.media.youtube}" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <button type="button" class="exitButton">f5</button>        
+          </div>
+          `;
+    },
+    exitButtonEventListener() {
+      
+    }
+    
   };
   app.initialize();
 })();

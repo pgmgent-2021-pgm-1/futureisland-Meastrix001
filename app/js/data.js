@@ -91,7 +91,7 @@ rockwerchterinfo = [
 },
  ];
 
-knowmorelist = [
+knowMoreList = [
 {
   text: 'Tickets',
   link: 'https://www.rockwerchter.be/en/practical/tickets'
@@ -107,13 +107,13 @@ knowmorelist = [
 }, {
   text: 'Frequently asked questions',
   link: 'https://www.rockwerchter.be/en/practical/frequently-asked-questions'
-}, ];
+}];
 
 newsletter = [{
   sub: 'SUBSCRIBE',
   title: 'newsletter',
   text: 'Subscribe to our newsletter to stay tuned to the latest news.'
-}]
+}];
 
 
 
@@ -132,7 +132,7 @@ artists = [{
       large: 'https://assets.rockwerchter.be/files/cache/medium/files/alt-j-5f030ee72f4ba.jpg'
     },
     media: {
-      youtube: 'https://www.youtube.com/channel/UCAMWWQQNQeD73DtiddfBrpg'
+      youtube: 'https://www.youtube.com/embed/GOJUNJ1o394'
     }
   },
   {
@@ -242,4 +242,4 @@ artists = [{
       youtube: 'https://www.youtube.com/channel/UCWqvhmZyB66eKv01SiH_Kjg'
     }
   },
-]
+];

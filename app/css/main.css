@@ -7,8 +7,34 @@
 body {
   background-color: white;
   margin: 0;
+  position: relative;
 }
-
+.showArtistDetails{
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  width: 50rem;
+  height: v;
+  background-color: rgb(76, 75, 77);
+}
+.artistDetailBackground{
+  position: absolute;
+background-color: rgba(146, 146, 146, 0.4);
+width: 100%;
+height: 100%;
+z-index: 1;
+}
+.exitButton{
+  position: absolute;
+  height: 2rem;
+  width: 2rem;
+  background-color: white;
+  top: 0;
+  left: -2rem;
+  font-size: 2rem;
+  text-align: center;
+  cursor: pointer;
+}
 .navbar {
   background: url(https://assets.rockwerchter.be/layout/frontend/img/svg/pattern-2021.svg);
   height: 22rem;
@@ -54,6 +80,10 @@ body {
 }
 .navBarLayout a{
   color: white;
+  text-decoration: none;
+}
+.navBarLayout a:hover{
+  color: black;
 }
 
 .navBarLayout :nth-child(2) {
@@ -92,6 +122,8 @@ body {
 }
 
 .artistsInfo {
+  background-position:top center;
+  flex-grow: 1;
   color: white;
   margin: 5px;
   width: 45rem;
@@ -100,6 +132,7 @@ body {
   background-color: green;
   background-position: 50% 50%;
   position: relative;
+  cursor: pointer;
 }
 
 .artistsInfo p {
@@ -133,7 +166,6 @@ body {
 .footer__wrapper a {
   text-decoration: none;
 }
-
 .social {
   list-style: none;
   width: 10rem;
@@ -149,8 +181,12 @@ body {
   top: 5rem;
   left: 5rem
 }
-
-.social a:hover,
+.fa:hover {
+transform: rotate(6deg);
+  opacity: 0.7;
+  color: gray;
+  transition: 0.2s;
+}
 .infobox a:hover,
 .info a:hover,
 .knowmore a:hover,
@@ -158,7 +194,7 @@ body {
   text-decoration: underline;
 }
 
-.fa {
+.fa{
   background-color: black;
   padding: 20px;
   font-size: 30px;
@@ -169,14 +205,11 @@ body {
   flex-wrap: wrap;
   flex-direction: row;
 }
-
-.fa:hover {
-
-  opacity: 0.7;
-  color: gray;
-  transition: 0.2s;
-  transform: rotate(7deg);
+.fa::before{
+  color: white;
 }
+
+
 
 .infobox {
   background-color: #009;
@@ -196,4 +229,11 @@ input {
   border: 2px solid white;
   color: white;
   height: 2rem;
+}
+button{
+  background-color: white;
+  border: 2px solid gray;
+  color: #009;
+  height: 2rem;
+  cursor: pointer;
 }
