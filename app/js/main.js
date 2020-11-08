@@ -133,7 +133,7 @@
       tempStr = '<h2>Info</h2>';
       rockwerchterinfo.forEach((info, index) => {
         tempStr += `
-          <li> <a href="${index} ${info.link}">${info.text}</a></li>`;
+          <li> <a href="${info.link}">${info.text}</a></li>`;
       });
       return tempStr;
     },
